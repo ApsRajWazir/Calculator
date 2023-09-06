@@ -1,0 +1,86 @@
+:root{
+    --color1: rgb(0, 0, 0);
+    --color2: antiquewhite;
+    --color3: grey;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color3);
+}
+
+#calculator{
+    /* border: 5px solid red; */
+    height: auto;
+    width: 25vw;
+    margin: 20vh auto 0 auto;
+}
+
+.containers{
+    /* border: 3px solid blue; */
+    width: 24vw;
+}
+
+#outputBox{
+    color: var(--color2);
+    border: 2px solid var(--color1);
+    background-color: var(--color1);
+    height: 9vh;
+    margin-bottom: 13px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    border-radius: 25vh;
+}
+
+#input{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons{
+    height: 7vh;
+    width: 5vw;
+    margin-bottom: 5%;
+    border-radius: 25vh;
+    background-color: var(--color1);
+    color: var(--color2);
+    font-weight: bold;
+    font-size: 1.4em;
+    cursor: pointer;
+    border: 2px solid var(--color1);
+}
+
+.buttons:hover{
+    background-color: grey;
+    color: var(--color1);
+}
+
+
+/* Responsiveness */
+
+
+@media only screen and (max-width: 950px)  {
+    #calculator{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .containers{
+        width: 82vw;
+    }
+
+    .buttons{
+        width: 20vw;
+    }
+
+    .buttons, #outputBox{
+        font-size: 1.7em;
+    }
+}
